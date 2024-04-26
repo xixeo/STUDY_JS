@@ -53,19 +53,11 @@ article {
   padding-top: 20px;
 }
 
-.img_wrap {
-  display: flex;
-
-  img {
-    margin: 20px;
-  }
-}
-
 .title {
   width: 100%;
   min-height: 60px;
-  background: #71edd0;
-  border: 1px dotted rgb(136, 177, 231);
+  background: #f8caaf;
+  /* border: 2px solid #ff453c; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,60 +70,51 @@ article {
 
 }
 
-
-#btnDiv {
+.inputWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  min-height: 60px;
-  background: #71edd0;
-  border: 1px dotted rgb(136, 177, 231);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-weight: bold;
+  flex-wrap: wrap;
+  /* background-color: #ff453c; */
   border-radius: 4px;
-  margin-bottom: 20px;
-  padding: 30px;
+  /* border: 3px solid #ff453c; */
+  padding: 30px 30px 10px 30px;
   box-sizing: border-box;
-}
 
-.input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 60px;
 
-  input[type=number] {
-    height: 36px;
-    font-size: large;
-    /* border-radius: 10px 0 0 10px; */
-    border: 3px solid #000;
-    border-right: 0;
-    outline-width: 0;
+  .inputBox {
+    width: 50%;
     padding: 0 10px;
-    width: 180px;
-  }
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    height: 40px;
+    margin-bottom: 20px;
 
+    label{
+      font-weight: bold;
+      font-size: 1.8rem;
+      /* color: #fff; */
+      padding-left: 10px;
+    }
 
-  button {
-    height: 42px;
-    padding: 10px 15px;
-    border: 3px solid #000;
-    background-color: #F7D700;
-    font-weight: bold;
-    /* border-radius: 0px 10px 10px 0; */
-    color: black;
-
-    &:hover {
-      background: #f7bd00;
-      cursor: pointer;
-      transition: all 0.5s;
+    #txt2{
+      background: #e0e0e0;
     }
   }
-}
 
-.input:has(input:focus) {
-  input, button {
-    border-color: #F7D700;
-  } 
+  input, select {
+    width: 200px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 100%;
+    border: 1px solid #222;
+    /* outline: 0; */
+  }
+
+  select{
+    background-position: calc(100% - 10px) center;
+  }
 }
