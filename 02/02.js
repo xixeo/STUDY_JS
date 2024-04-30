@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn2 = document.createElement('button');
 
   // 03. <button> 버튼11 </button> 텍스트
-  const btn1Text = document.createTextNode('버튼11');
-  const btn2Text = document.createTextNode('버튼21');
+  const btn1Text = document.createTextNode('텍스트 보이기');
+  const btn2Text = document.createTextNode('텍스트 숨기기');
 
   // 04. msg 상수 선언해서 사용하기
   const msg = document.querySelector('#msg');
