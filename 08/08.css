@@ -95,5 +95,13 @@ article {
       background: rgb(218, 218, 243);
     }
   }
+  .changeBox button{
+    background-color: rgb(218, 218, 243);
+    color: rgb(62, 62, 177);
+    font-weight: bold;
+    &:hover{
+      background: rgb(176, 176, 233);
+    }
+  }
  
 }

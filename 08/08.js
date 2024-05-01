@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const txt1 = document.querySelector('#txt1');
   const addBtns = document.querySelectorAll('.addBox button');
   const deleteBtns = document.querySelectorAll('.deleteBox button');
+  const changeBtns = document.querySelectorAll('.changeBox button');
 
   let arr = [];
 
@@ -29,7 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     '사과': '🍎',
     '바나나': '🍌',
     '오렌지': '🍊',
-    '수박': '🍉'
+    '수박': '🍉',
+    '당근': '🥕',
+    '오이': '🥒',
+    '아보카도': '🥑',
+    '버섯': '🍄'
   }
 
   for (let btn of addBtns) {
@@ -60,6 +65,26 @@ document.addEventListener('DOMContentLoaded', () => {
       arr = arr.filter(item => item != k); // 매개변수가 item하나 밖에 없으니 중괄호 생략가능
 
       // 필터링 된 배열 다시 출력
+      txt1.value = arr.join(' ');
+    });
+  }
+
+  // 3. 배열 변환
+  for(let btn of changeBtns){
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      let tm = btn.textContent.split(' → ');
+      console.log(tm);
+      
+      // arr = arr.map((item) => {
+      //   console.log(item, obj[tm[0]], obj[tm[1]]);
+      //   return item == obj[tm[0]] ? obj[tm[1]] : item ;
+      // });
+
+      arr = arr.map(item =>  item == obj[tm[0]] ? obj[tm[1]] : item);
+        // console.log(item, obj[tm[0]], obj[tm[1]]);      
+
       txt1.value = arr.join(' ');
     });
   }
